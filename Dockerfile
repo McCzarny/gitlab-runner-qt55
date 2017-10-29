@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y libsm6 libice6 libxext6 libxrender1 lib
   && curl -sSL https://download.qt.io/official_releases/online_installers/qt-unified-linux-x64-online.run -o qt.run \
   && chmod +x qt.run \
   && sync \
-  && ./qt.run --platform minimal --script qt-installer-noninteractive.qs \
+  && ./qt.run --platform minimal --script qt-installer-noninteractive.qs -v \
   && rm -rf \
     qt.run \
     /opt/qt/update.rcc \
