@@ -4,7 +4,7 @@ ENV QMAKE qmake
 ENV PATH $PATH:/opt/qt/5.5/gcc_64/bin/
 ADD qt-installer-noninteractive.qs .
 
-RUN apt-get update && apt-get -y install libsm6 libice6 libxext6 libxrender1 libfontconfig1 build-essential \
+RUN apt-get update && apt-get -y libx11-xcb-dev install libsm6 libice6 libxext6 libxrender1 libfontconfig1 libx11-xcb-dev build-essential \
   && curl -sSL https://download.qt.io/official_releases/online_installers/qt-unified-linux-x64-online.run -o qt.run \
   && chmod +x qt.run \
   && sync \
