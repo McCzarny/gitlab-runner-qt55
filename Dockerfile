@@ -1,7 +1,7 @@
 FROM gitlab/gitlab-runner
 
-ENV QMAKE qmake
-ENV PATH $PATH:/opt/qt/5.5/gcc_64/bin/
+ENV QMAKE=qmake
+ENV PATH="${PATH}:/opt/qt/5.5/gcc_64/bin/"
 ADD qt-installer-noninteractive.qs .
 
 RUN apt-get update && apt-get install -y --no-install-recommends libsm6 libice6 libxext6 libxrender1 libfontconfig1 libx11-xcb-dev build-essential libfontconfig1 libXrender1 libsm6 libfreetype6 libglib2.0-0 \
